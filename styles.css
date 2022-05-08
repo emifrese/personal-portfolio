@@ -1,0 +1,251 @@
+html {
+    scroll-behavior: smooth;
+  }
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', helvetica;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+h1, h2 {
+    font-family: 'Raleway', monospace;
+    font-weight: 600;
+    text-align: center;
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    background-color: #1d3557;
+}
+
+#projects .btn:hover {
+    background-color: #459acf;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    max-width: 100vw;
+    background-color: #e63946;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    margin-right: 2rem;
+    padding: 0;
+    margin: 0;
+}
+
+#navbar a {
+    display: block;
+    font-size: 1.5rem;
+    padding: 1rem;
+    cursor: pointer
+}
+
+#navbar li:hover {
+    background-color: #1d3557
+}
+
+#welcome-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    max-width: 100vw;
+    background-color: #a8dadc;
+}
+
+#welcome-section h1 {
+    font-size: 4rem;
+    margin: 0.5rem;
+}
+
+#welcome-section p {
+    font-size: 2rem;
+    font-weight: 200;
+    font-style: italic;
+    margin: 0.5rem;
+}
+
+#projects {
+    display: block;
+    width: 100vw;
+    background-color: #457b9d;
+    text-align: center;
+    padding: 5rem 1.5rem;
+}
+
+#projects h2 {
+    font-size: 3rem;
+    border-bottom: 0.2rem solid #fff;
+    max-width: 640px;
+    margin: 0 auto 3rem auto;
+    background-color: inherit;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 2rem;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+}
+
+.project {
+    background: #1d3557;
+    border-radius: 2px;
+}
+
+.project img {
+    object-fit: cover;
+    width: 100%;
+}
+
+.project-title {
+    font-size: 1.5rem;
+    padding: 0.1rem 0.1rem;
+    padding-bottom: 0;
+    margin: 0;
+}
+
+.project-title:hover p > .code {
+    animation-name: color;
+    animation-duration: 300ms;
+    animation-fill-mode: forwards
+}
+
+.code {
+    color: #1d3557;
+}
+
+.greater-than {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+#contact {
+    width: 100%;
+    background-color: #a8dadc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 80vh;
+    padding: 0 1.5rem;
+}
+
+
+.contact-section-header h2{
+    font-size: 3rem;
+}
+
+.contact-section-header p {
+    font-style: italic;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 100vw;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+}
+
+.contact-links img {
+    width: 20px;
+}
+
+.contact-details {
+    font-size: 1.7rem;
+    text-shadow: 2px 2px 1px #222;
+    background-color: #a8dadc;
+    color: #000;
+}
+
+.contact-details:hover {
+    animation-name: transform;
+    animation-duration: 300ms;
+    animation-fill-mode: forwards
+    
+}
+
+@keyframes color {
+    100% {
+        color: #e63946;
+    }
+}
+
+@keyframes transform {
+    100% {
+        transform: translateY(5px);
+    }
+}
+
+@media (max-width: 500px) {
+    #navbar a {
+        font-size: 0.75rem;
+    }
+
+    #welcome-section h1 {
+        font-size: 3rem;
+    }
+
+    #welcome-section p {
+        font-size: 1.5rem;
+    }
+
+    #projects {
+        padding: 3rem 1rem;
+    }
+
+    #projects h2 {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        border-bottom: 0.15rem solid #fff;
+    }
+
+    .project-title {
+        font-size: 1rem;
+    }
+
+    .contact-section-header h2 {
+        font-size: 2rem;
+    }
+
+    .contact-section-header p {
+        font-size: 1rem;
+    }
+
+    .contact-details {
+        font-size: 1rem;
+    }
+
+    .contact-details img {
+        width: 16px;
+    }
+}
